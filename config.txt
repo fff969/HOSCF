@@ -1,0 +1,60 @@
+#  viscous type  0.invis  1.lamia  2.LES 9.scalar
+0
+
+#  1.ord    2. flux reconstruction type <1.Nodal DG 2.SD>   3.pts distribute type <1.Gauss Legendre 2 .Gauss Lobatto>
+4       1       2
+
+#  grd_scale
+1.0
+
+#  1).time method < 1.min_dt  2.con_dt>     2). NRK   3).constant time step  4).cfl
+2 1 1e-5 0.3
+
+#  0.already  cal nums   1.  case  cal nums  2. autosave nums 
+#  3.printf screen  rhs num ( default:100 )  4. write  resi file num 
+#  5.post treatment nums
+0  1  10000  1000  0 0
+
+#  0. already  cal time  1.case  cal time 
+0.0  0.0 
+
+# in dir
+in/
+
+#out dir
+out/
+
+# input CGNS filename
+vt_unif_0.cgns
+#taylorgreen32.cgns
+
+
+# gamma  Pr  mu_beta  Tms      Tks    cp        R
+1.4       1     1.5   110.4    194   1004.647   287.04199
+
+# T00  L00  V00        Re00
+300    1    277.7713       400
+
+# ro         u   v   w     p  // for 2D problem w is unuse
+# 0.91240877   0.5   0   0   1.1160713
+#1.4 0.38 0.0 0.0 1.0
+#1.4 1.0 0.0 0.0 1.0
+1.4 0.5 0.0 0.0 1.0
+
+# Twall   Wall  temperature
+0
+
+# case num  &&  post num  
+#test case num 0 is original  
+# 299 curve boudary  203 2D vortex transport
+# post num 0 nothing to , 1 entropy error 
+203   0 
+
+# Limiter prarameter
+0.0
+
+#Circel Boundary Conditions
+0.1 0.1 11111.0  1e-5
+
+#out_restart ? out_alldata
+0     0
